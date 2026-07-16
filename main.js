@@ -115,4 +115,52 @@
       el.textContent = parseInt(el.getAttribute('data-count'), 10).toLocaleString('es-PE');
     });
   }
+
+  /* ---------- Botones "Copiar" [data-copy] ---------- */
+  document.querySelectorAll('[data-copy]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var text = btn.getAttribute('data-copy');
+      var original = btn.textContent;
+      function done() {
+        btn.textContent = '✓ ¡Copiado!';
+        setTimeout(function () { btn.textContent = original; }, 1800);
+      }
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(done).catch(function () { fallback(); });
+      } else { fallback(); }
+      function fallback() {
+        var input = document.createElement('input');
+        input.value = text;
+        document.body.appendChild(input);
+        input.select();
+        document.execCommand('copy');
+        document.body.removeChild(input);
+        done();
+      }
+    });
+  });
+
+  /* ---------- Estadísticas de copytrading (assets/stats.json) ---------- */
+  var statsUpdated = document.getElementById('stats-updated');
+  if (statsUpdated) {
+    fetch('assets/stats.json', { cache: 'no-store' })
+      .then(function (r) { return r.ok ? r.json() : null; })
+      .then(function (s) {
+        if (!s) return;
+        function setStat(id, value) {
+          var el = document.getElementById(id);
+          if (el && value != null && !isNaN(value)) {
+            el.setAttribute('data-count', Math.round(value));
+          }
+        }
+        setStat('stat-winrate', s.winRate);
+        setStat('stat-trades', s.totalTrades);
+        if (s.updatedAt) {
+          var d = new Date(s.updatedAt);
+          statsUpdated.textContent = 'Datos obtenidos de la API de Bitget · Actualizado: ' +
+            d.toLocaleDateString('es-PE', { day: '2-digit', month: 'long', year: 'numeric' });
+        }
+      })
+      .catch(function () { /* si falla, quedan los valores por defecto */ });
+  }
 })();

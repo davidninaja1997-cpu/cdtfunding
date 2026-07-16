@@ -1,0 +1,7 @@
+{
+  "winRate": 68,
+  "totalTrades": 150,
+  "profit90dUsdt": null,
+  "updatedAt": null,
+  "_nota": "REEMPLAZAR: valores de referencia. Se actualizan automaticamente cuando configures los secretos BITGET_API_KEY, BITGET_API_SECRET y BITGET_API_PASSPHRASE en GitHub (Settings > Secrets and variables > Actions)."
+}

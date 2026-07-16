@@ -1,0 +1,36 @@
+name: Actualizar estadísticas de copytrading
+
+on:
+  schedule:
+    # Dos veces al día (horario UTC)
+    - cron: '0 6,18 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-stats:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Descargar código
+        uses: actions/checkout@v4
+
+      - name: Configurar Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Consultar API de Bitget y actualizar stats.json
+        run: node scripts/update-stats.mjs
+        env:
+          BITGET_API_KEY: ${{ secrets.BITGET_API_KEY }}
+          BITGET_API_SECRET: ${{ secrets.BITGET_API_SECRET }}
+          BITGET_API_PASSPHRASE: ${{ secrets.BITGET_API_PASSPHRASE }}
+
+      - name: Publicar cambios si los hay
+        run: |
+          git config user.name "cdt-stats-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add assets/stats.json
+          git diff --cached --quiet || (git commit -m "Actualizar estadísticas de copytrading desde la API de Bitget" && git push)
