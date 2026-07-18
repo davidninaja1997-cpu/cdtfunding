@@ -42,19 +42,19 @@ async function apiGet(pathWithQuery) {
 const end = Date.now();
 const start = end - 90 * 24 * 3600 * 1000;
 
-// La clave Elite funciona como una cuenta de futuros normal limitada al
-// portafolio: probamos los endpoints estándar de mix (futuros USDT).
+// La clave Elite usa la API de Cuenta Unificada (UTA, v3):
+// https://www.bitget.com/api-doc/uta/copy/Elite-Trading-API-Guide
 
-// 1) Cuenta / saldo del portafolio
-await apiGet(`/api/v2/mix/account/accounts?productType=USDT-FUTURES`);
+// 1) Activos / saldo del portafolio
+await apiGet(`/api/v3/account/assets`);
 
 // 2) Posiciones abiertas
-await apiGet(`/api/v2/mix/position/all-position?productType=USDT-FUTURES&marginCoin=USDT`);
+await apiGet(`/api/v3/position/current-position?category=USDT-FUTURES`);
 
 // 3) Posiciones cerradas (con PnL) — para win rate
-await apiGet(`/api/v2/mix/position/history-position?productType=USDT-FUTURES&startTime=${start}&endTime=${end}&limit=20`);
+await apiGet(`/api/v3/position/history-position?category=USDT-FUTURES&limit=20`);
 
 // 4) Historial de órdenes
-await apiGet(`/api/v2/mix/order/orders-history?productType=USDT-FUTURES&startTime=${start}&endTime=${end}&limit=20`);
+await apiGet(`/api/v3/trade/history-orders?category=USDT-FUTURES&limit=20`);
 
 console.log('\nDiagnóstico terminado.');
