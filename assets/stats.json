@@ -1,6 +1,0 @@
-{
-  "pnl180dUsdt": 824.66,
-  "copierProfitUsdt": 320.09,
-  "updatedAt": "2026-07-18T15:00:00Z",
-  "_nota": "Valores tomados del panel de trader Clubdeltrader en Bitget (Historial del portafolio). La API publica v2 de Bitget aun no expone los datos del sistema nuevo de portafolios, asi que estos numeros se actualizan manualmente: pide a Claude actualizarlos con una captura nueva del panel."
-}
