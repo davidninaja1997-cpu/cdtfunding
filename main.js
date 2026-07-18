@@ -153,11 +153,11 @@
             el.setAttribute('data-count', Math.round(value));
           }
         }
-        setStat('stat-winrate', s.winRate);
-        setStat('stat-trades', s.totalTrades);
+        setStat('stat-pnl', s.pnl180dUsdt);
+        setStat('stat-copiers', s.copierProfitUsdt);
         if (s.updatedAt) {
           var d = new Date(s.updatedAt);
-          statsUpdated.textContent = 'Datos obtenidos de la API de Bitget · Actualizado: ' +
+          statsUpdated.textContent = 'Fuente: panel del trader Clubdeltrader en Bitget · Actualizado: ' +
             d.toLocaleDateString('es-PE', { day: '2-digit', month: 'long', year: 'numeric' });
         }
       })
