@@ -54,18 +54,34 @@ async function apiGet(pathWithQuery) {
 const endTime = Date.now();
 const startTime = endTime - 90 * 24 * 3600 * 1000;
 
+async function fetchOrders(basePath, extraParams) {
+  let result = [];
+  let idLessThan = '';
+  for (let page = 0; page < 20; page++) {
+    const qs = extraParams + `startTime=${startTime}&endTime=${endTime}&limit=100` +
+      (idLessThan ? `&idLessThan=${idLessThan}` : '');
+    const data = await apiGet(`${basePath}?${qs}`);
+    const list = data?.trackingList ?? data?.list ?? (Array.isArray(data) ? data : []);
+    if (!list || list.length === 0) break;
+    result = result.concat(list);
+    const last = list[list.length - 1];
+    idLessThan = last?.trackingNo ?? last?.id ?? '';
+    if (!idLessThan || list.length < 100) break;
+  }
+  return result;
+}
+
 let orders = [];
-let idLessThan = '';
-for (let page = 0; page < 20; page++) {
-  const qs = `productType=USDT-FUTURES&startTime=${startTime}&endTime=${endTime}&limit=100` +
-    (idLessThan ? `&idLessThan=${idLessThan}` : '');
-  const data = await apiGet(`/api/v2/copy/mix-trader/order-history-track?${qs}`);
-  const list = data?.trackingList ?? data?.list ?? (Array.isArray(data) ? data : []);
-  if (!list || list.length === 0) break;
-  orders = orders.concat(list);
-  const last = list[list.length - 1];
-  idLessThan = last?.trackingNo ?? last?.id ?? '';
-  if (!idLessThan || list.length < 100) break;
+try {
+  // Trader de copytrading de futuros
+  orders = await fetchOrders('/api/v2/copy/mix-trader/order-history-track', 'productType=USDT-FUTURES&');
+} catch (e) {
+  if (/not currently a trader/i.test(e.message)) {
+    console.log('La cuenta no es trader de futuros — probando como trader spot…');
+    orders = await fetchOrders('/api/v2/copy/spot-trader/order-history-track', '');
+  } else {
+    throw e;
+  }
 }
 console.log(`Órdenes obtenidas: ${orders.length}`);
 
