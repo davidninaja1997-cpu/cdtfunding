@@ -57,7 +57,7 @@ const startTime = endTime - 90 * 24 * 3600 * 1000;
 let orders = [];
 let idLessThan = '';
 for (let page = 0; page < 20; page++) {
-  const qs = `startTime=${startTime}&endTime=${endTime}&pageSize=100` +
+  const qs = `productType=USDT-FUTURES&startTime=${startTime}&endTime=${endTime}&limit=100` +
     (idLessThan ? `&idLessThan=${idLessThan}` : '');
   const data = await apiGet(`/api/v2/copy/mix-trader/order-history-track?${qs}`);
   const list = data?.trackingList ?? data?.list ?? (Array.isArray(data) ? data : []);
