@@ -42,16 +42,19 @@ async function apiGet(pathWithQuery) {
 const end = Date.now();
 const start = end - 90 * 24 * 3600 * 1000;
 
-// 1) Historial de órdenes como trader de futuros (sistema clásico)
-await apiGet(`/api/v2/copy/mix-trader/order-history-track?productType=USDT-FUTURES&startTime=${start}&endTime=${end}&limit=20`);
+// La clave Elite funciona como una cuenta de futuros normal limitada al
+// portafolio: probamos los endpoints estándar de mix (futuros USDT).
 
-// 2) Órdenes actuales como trader de futuros
-await apiGet(`/api/v2/copy/mix-trader/order-current-track?productType=USDT-FUTURES&limit=20`);
+// 1) Cuenta / saldo del portafolio
+await apiGet(`/api/v2/mix/account/accounts?productType=USDT-FUTURES`);
 
-// 3) Resumen total del trader
-await apiGet(`/api/v2/copy/mix-trader/order-total-detail`);
+// 2) Posiciones abiertas
+await apiGet(`/api/v2/mix/position/all-position?productType=USDT-FUTURES&marginCoin=USDT`);
 
-// 4) Resumen de ganancias del trader
-await apiGet(`/api/v2/copy/mix-trader/profit-history-summarys?coin=USDT&pageNo=1&pageSize=10`);
+// 3) Posiciones cerradas (con PnL) — para win rate
+await apiGet(`/api/v2/mix/position/history-position?productType=USDT-FUTURES&startTime=${start}&endTime=${end}&limit=20`);
+
+// 4) Historial de órdenes
+await apiGet(`/api/v2/mix/order/orders-history?productType=USDT-FUTURES&startTime=${start}&endTime=${end}&limit=20`);
 
 console.log('\nDiagnóstico terminado.');
