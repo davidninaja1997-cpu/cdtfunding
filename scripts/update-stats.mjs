@@ -76,11 +76,20 @@ try {
   // Trader de copytrading de futuros
   orders = await fetchOrders('/api/v2/copy/mix-trader/order-history-track', 'productType=USDT-FUTURES&');
 } catch (e) {
-  if (/not currently a trader/i.test(e.message)) {
-    console.log('La cuenta no es trader de futuros — probando como trader spot…');
+  console.log('Fallo como trader de futuros:', e.message);
+  try {
+    console.log('Probando como trader spot…');
     orders = await fetchOrders('/api/v2/copy/spot-trader/order-history-track', '');
-  } else {
-    throw e;
+  } catch (e2) {
+    console.log('Fallo como trader spot:', e2.message);
+    console.log('');
+    console.log('════════════════════════════════════════════════════════════');
+    console.log('La API de Bitget no reconoce esta cuenta como trader de');
+    console.log('copytrading. Verifica que la API key esté creada en la MISMA');
+    console.log('cuenta de Bitget donde vive tu perfil de trader.');
+    console.log('No se actualizan las estadísticas (se mantienen las actuales).');
+    console.log('════════════════════════════════════════════════════════════');
+    process.exit(0);
   }
 }
 console.log(`Órdenes obtenidas: ${orders.length}`);
