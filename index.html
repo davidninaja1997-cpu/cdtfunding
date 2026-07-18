@@ -536,16 +536,16 @@ h1,h2,h3{font-weight:800;line-height:1.12;letter-spacing:-.02em}
             <path fill="none" stroke="#7FB2FF" stroke-width="2.4" d="M0,70 L36,63 L64,66 L96,54 L128,58 L160,44 L192,49 L224,34 L256,38 L288,22 L320,14"/>
           </svg>
           <div class="t-stats">
-            <!-- Cifras reales del panel de trader de Bitget (Historial del portafolio, 18/07/2026) -->
+            <!-- PnL histórico y copiadores: del panel de Bitget (18/07/2026). Equity: vía API automática -->
             <div class="ts"><b class="up">+824.66</b><span>PnL USDT (180d)</span></div>
             <div class="ts"><b class="up">+320</b><span>USDT a copiadores</span></div>
             <div class="ts"><b>10%</b><span>Profit share desde</span></div>
-            <div class="ts"><b>2</b><span>Portafolios cerrados</span></div>
+            <div class="ts"><b class="up"><span data-count="500" id="stat-equity">0</span></b><span>Equity en vivo (USDT)</span></div>
           </div>
           <div class="t-actions">
             <a href="https://share.glassgs.com/sl/SQ2FABDMW3JS" target="_blank" rel="noopener" class="btn btn-gold">Copiar</a>
           </div>
-          <p style="font-family:var(--mono);font-size:11.5px;color:var(--muted);text-align:center;margin-top:10px">🔥 Portafolio público · Solo <b style="color:var(--gold)">100 cupos</b> para copiadores</p>
+          <p style="font-family:var(--mono);font-size:11.5px;color:var(--muted);text-align:center;margin-top:10px">🔥 Portafolio público · Solo <b style="color:var(--gold)">100 cupos</b> para copiadores<br><span id="stats-fecha"></span></p>
           <div class="glare"></div>
         </div>
       </div>
@@ -901,6 +901,24 @@ h1,h2,h3{font-weight:800;line-height:1.12;letter-spacing:-.02em}
   document.querySelectorAll('a[href*="wa.me"]').forEach(function (a) {
     a.addEventListener('click', function () { track('click_postular', {}); });
   });
+
+  /* ---- Estadísticas en vivo del portafolio (assets/stats.json) ---- */
+  fetch('assets/stats.json', { cache: 'no-store' })
+    .then(function (r) { return r.ok ? r.json() : null; })
+    .then(function (s) {
+      if (!s) return;
+      var eq = document.getElementById('stat-equity');
+      if (eq && s.equityUsdt != null && !isNaN(s.equityUsdt)) {
+        eq.setAttribute('data-count', Math.round(s.equityUsdt));
+      }
+      var f = document.getElementById('stats-fecha');
+      if (f && s.updatedAt) {
+        var d = new Date(s.updatedAt);
+        f.textContent = 'Equity vía API de Bitget · Actualizado: ' +
+          d.toLocaleDateString('es-PE', { day: '2-digit', month: 'short', year: 'numeric' });
+      }
+    })
+    .catch(function () {});
 })();
 </script>
 </body>
