@@ -419,6 +419,7 @@ h1,h2,h3{font-weight:800;line-height:1.12;letter-spacing:-.02em}
       <div class="hero-ctas">
         <a href="#traders" class="btn btn-gold btn-lg">Ver el ranking →</a>
         <a href="#postular" class="btn btn-ghost btn-lg">Postular como trader</a>
+        <a href="https://partner.bitget.com/bg/WH97H6" target="_blank" rel="noopener" class="btn btn-ghost btn-lg">Crear cuenta en Bitget</a>
       </div>
       <div class="hero-stats">
         <div class="hstat"><b data-count="3">0</b><span>Traders aprobados</span></div>
@@ -511,6 +512,7 @@ h1,h2,h3{font-weight:800;line-height:1.12;letter-spacing:-.02em}
             <!-- REEMPLAZAR: enlace del portafolio de la estrategia Scalping en Bitget -->
             <a href="#LINK-SCALPING-STRATEGY" class="btn btn-gold">Copiar</a>
           </div>
+          <p style="font-family:var(--mono);font-size:11.5px;color:var(--muted);text-align:center;margin-top:10px">¿No tienes cuenta en Bitget? <a href="https://partner.bitget.com/bg/WH97H6" target="_blank" rel="noopener" style="color:var(--gold);font-weight:700">Créala aquí</a></p>
           <div class="glare"></div>
         </div>
       </div>
@@ -546,6 +548,7 @@ h1,h2,h3{font-weight:800;line-height:1.12;letter-spacing:-.02em}
             <a href="https://share.glassgs.com/sl/QHKR9LUXJ38E" target="_blank" rel="noopener" class="btn btn-gold">Copiar</a>
           </div>
           <p style="font-family:var(--mono);font-size:11.5px;color:var(--muted);text-align:center;margin-top:10px">🔥 Portafolio público · Solo <b style="color:var(--gold)">100 cupos</b> para copiadores<br><span id="stats-fecha"></span></p>
+          <p style="font-family:var(--mono);font-size:11.5px;color:var(--muted);text-align:center;margin-top:8px">¿No tienes cuenta en Bitget? <a href="https://partner.bitget.com/bg/WH97H6" target="_blank" rel="noopener" style="color:var(--gold);font-weight:700">Créala aquí</a></p>
           <div class="glare"></div>
         </div>
       </div>
@@ -665,6 +668,16 @@ h1,h2,h3{font-weight:800;line-height:1.12;letter-spacing:-.02em}
     </div>
     <!-- REEMPLAZAR: pon tu número real de WhatsApp (51 + número, sin espacios) -->
     <a href="https://wa.me/51XXXXXXXXX" target="_blank" rel="noopener" class="btn btn-gold btn-lg">📩 Postular como trader</a>
+  </div>
+</section>
+
+<!-- ================= REGISTRO BITGET ================= -->
+<section id="registro" style="border-top:1px solid var(--line);text-align:center">
+  <div class="container reveal">
+    <div class="eyebrow">Regístrate</div>
+    <h2 style="font-size:clamp(26px,4.4vw,40px)">¿Aún no tienes cuenta en <span class="accent">Bitget</span>?</h2>
+    <p style="color:var(--muted);max-width:580px;margin:14px auto 30px">Créala con el enlace oficial de CDT y obtén <b style="color:var(--text)">10% de descuento en las comisiones de spot</b>, además de los bonos de bienvenida para nuevos usuarios.</p>
+    <a href="https://partner.bitget.com/bg/WH97H6" target="_blank" rel="noopener" class="btn btn-gold btn-lg">Crear cuenta con descuento →</a>
   </div>
 </section>
 
@@ -900,6 +913,11 @@ h1,h2,h3{font-weight:800;line-height:1.12;letter-spacing:-.02em}
   // Clic en "Postular como trader" (WhatsApp)
   document.querySelectorAll('a[href*="wa.me"]').forEach(function (a) {
     a.addEventListener('click', function () { track('click_postular', {}); });
+  });
+
+  // Clic en el enlace de afiliado de Bitget
+  document.querySelectorAll('a[href*="partner.bitget.com"]').forEach(function (a) {
+    a.addEventListener('click', function () { track('click_registro_bitget', {}); });
   });
 
   /* ---- Estadísticas en vivo del portafolio (assets/stats.json) ---- */
