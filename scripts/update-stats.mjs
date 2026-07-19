@@ -90,6 +90,11 @@ try {
   }
 } catch (e) { console.log('history-position:', e.message); }
 
+if (equityUsdt == null && trades90d == null) {
+  console.log('La API no devolvió ningún dato — se conservan las estadísticas anteriores sin cambios.');
+  process.exit(0);
+}
+
 const stats = {
   equityUsdt: equityUsdt != null ? Math.round(equityUsdt * 100) / 100 : null,
   winRate,
