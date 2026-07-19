@@ -166,6 +166,25 @@ h1,h2,h3{font-weight:800;line-height:1.12;letter-spacing:-.02em}
 .hstat b{display:block;font-size:clamp(22px,3vw,30px);font-weight:800;color:var(--gold);letter-spacing:-.02em}
 .hstat b span{font-size:inherit;color:inherit}
 .hstat > span{font-size:12.5px;color:var(--muted)}
+.link-quiet{font-size:13.5px;font-weight:600;color:var(--muted);transition:color .15s}
+.link-quiet:hover{color:var(--gold);text-decoration:underline}
+@media(max-width:600px){
+  .hero-ctas{flex-direction:column;align-items:stretch}
+  .hero-ctas .btn{width:100%}
+}
+
+/* ---------- Banda CTA intermedia ---------- */
+.cta-band{
+  border-top:1px solid rgba(232,184,75,.28);border-bottom:1px solid rgba(232,184,75,.28);
+  background:linear-gradient(90deg,rgba(232,184,75,.13),rgba(232,184,75,.04) 55%,rgba(232,184,75,.13));
+  padding:26px 0;
+}
+.cta-band-inner{display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap}
+.cta-band-inner p{font-weight:700;font-size:17px}
+@media(max-width:640px){
+  .cta-band-inner{flex-direction:column;text-align:center}
+  .cta-band-inner .btn{width:100%}
+}
 
 /* elementos flotantes 3D */
 .hero-scene{position:absolute;inset:0;pointer-events:none;transform-style:preserve-3d}
@@ -417,12 +436,11 @@ h1,h2,h3{font-weight:800;line-height:1.12;letter-spacing:-.02em}
       <h1>Traders <span class="depth">verificados</span>.<br>Resultados reales.</h1>
       <p class="lead">La comunidad de trading en español de LATAM ahora lista traders verificados de copytrading. Historial auditado directo del exchange — <b style="color:var(--text)">sin capturas editadas, sin humo</b>.</p>
       <div class="hero-ctas">
-        <a href="#traders" class="btn btn-gold btn-lg">Ver el ranking →</a>
-        <a href="#postular" class="btn btn-ghost btn-lg">Postular como trader</a>
+        <a href="https://partner.bitget.com/bg/WH97H6" target="_blank" rel="noopener" class="btn btn-gold btn-lg">Crear cuenta en Bitget →</a>
+        <a href="#traders" class="btn btn-ghost btn-lg">Ver el ranking</a>
       </div>
-      <p style="margin-top:16px;font-size:14px">
-        <a href="https://partner.bitget.com/bg/WH97H6" target="_blank" rel="noopener" style="color:var(--gold);font-weight:600;border-bottom:1px solid rgba(232,184,75,.45);padding-bottom:2px">¿Nuevo en cripto? Crea tu cuenta en Bitget aquí →</a>
-      </p>
+      <p style="margin-top:12px;font-size:12.5px;color:var(--muted);font-family:var(--mono)">10% de descuento en comisiones · Bono de bienvenida hasta 6,200 USDT</p>
+      <p style="margin-top:10px"><a href="#postular" class="link-quiet">Postular como trader →</a></p>
       <div class="hero-stats">
         <div class="hstat"><b data-count="3">0</b><span>Traders aprobados</span></div>
         <div class="hstat"><b>+<span data-count="573">0</span></b><span>Copiadores activos</span></div>
@@ -596,6 +614,14 @@ h1,h2,h3{font-weight:800;line-height:1.12;letter-spacing:-.02em}
     </div>
   </div>
 </section>
+
+<!-- ================= BANDA CTA BITGET ================= -->
+<div class="cta-band">
+  <div class="container cta-band-inner reveal">
+    <p>Crea tu cuenta en Bitget con el enlace oficial de <span class="accent">CDT</span></p>
+    <a href="https://partner.bitget.com/bg/WH97H6" target="_blank" rel="noopener" class="btn btn-gold">Crear cuenta →</a>
+  </div>
+</div>
 
 <!-- ================= CÓMO FUNCIONA ================= -->
 <section id="como-funciona" style="border-top:1px solid var(--line)">
