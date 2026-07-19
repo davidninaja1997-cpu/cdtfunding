@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1420 400" role="img" aria-label="Club del Trader — No operes solo. Sigue la señal. Domina el mercado.">
+  <defs>
+    <linearGradient id="le-green" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3DDC84"/>
+      <stop offset="1" stop-color="#17A868"/>
+    </linearGradient>
+    <linearGradient id="le-gold" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F2C14E"/>
+      <stop offset="1" stop-color="#D9992A"/>
+    </linearGradient>
+    <linearGradient id="le-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#16160f"/>
+      <stop offset="1" stop-color="#0A0A08"/>
+    </linearGradient>
+  </defs>
+  <!-- Ícono -->
+  <g transform="translate(20,40) scale(0.625)">
+    <rect width="512" height="512" rx="118" fill="url(#le-bg)"/>
+    <rect x="4" y="4" width="504" height="504" rx="114" fill="none" stroke="#2E2E28" stroke-width="8"/>
+    <rect x="116" y="232" width="58" height="112" rx="14" fill="url(#le-green)"/>
+    <rect x="220" y="164" width="64" height="140" rx="14" fill="url(#le-gold)"/>
+    <rect x="326" y="112" width="58" height="118" rx="14" fill="url(#le-green)"/>
+  </g>
+  <!-- Nombre -->
+  <text x="410" y="185" font-family="Inter, Arial, Helvetica, sans-serif" font-weight="800" font-size="118" letter-spacing="-2">
+    <tspan fill="#FFFFFF">Club del </tspan><tspan fill="#E8B84B">Trader</tspan>
+  </text>
+  <!-- Eslogan -->
+  <text x="414" y="268" font-family="Inter, Arial, Helvetica, sans-serif" font-weight="700" font-size="56">
+    <tspan fill="#8E97A1">No operes solo.</tspan><tspan fill="#D7DCE1"> Sigue la señal.</tspan>
+  </text>
+  <text x="414" y="345" font-family="Inter, Arial, Helvetica, sans-serif" font-weight="700" font-size="56" fill="#E8B84B">Domina el mercado.</text>
+</svg>
