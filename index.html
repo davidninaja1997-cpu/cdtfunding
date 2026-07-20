@@ -4,10 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Club del Trader — Copia a David en Bitget · Solo referidos CDT</title>
-<meta name="description" content="Copia en automático las operaciones de David (Clubdeltrader) en Bitget. Acceso solo para referidos CDT. Garantía: si pierdes tu primer trade, te reembolsamos hasta $50.">
+<meta name="description" content="Copia en automático las operaciones de David (Clubdeltrader) en Bitget. Acceso solo para referidos CDT. Bono de bienvenida de $10 y protección anti-liquidación de hasta $100.">
 <link rel="canonical" href="https://clubdeltraderfx.com/">
 <meta property="og:title" content="Club del Trader — Copia a David en Bitget">
-<meta property="og:description" content="Copytrading solo para referidos CDT. Garantía de hasta $50 en tu primer trade.">
+<meta property="og:description" content="Copytrading solo para referidos CDT. Bono de $10 y protección anti-liquidación de hasta $100. Mínimo $100 para copiar.">
 <meta property="og:url" content="https://clubdeltraderfx.com/">
 <meta property="og:type" content="website">
 <meta property="og:image" content="https://clubdeltraderfx.com/assets/og-image.png">
@@ -278,6 +278,64 @@ a{color:inherit}
 .mobile-bar .btn{width:100%;padding:15px;font-size:15.5px}
 @media(max-width:700px){.mobile-bar{display:block}}
 
+/* ---------- Asistente CDT (chat) ---------- */
+.chat-launcher{
+  position:fixed;right:22px;bottom:24px;z-index:85;
+  display:flex;align-items:center;gap:10px;cursor:pointer;border:none;
+  background:linear-gradient(180deg,var(--gold-2),var(--gold));color:#241A04;
+  font-family:inherit;font-weight:800;font-size:14.5px;padding:13px 20px 13px 16px;border-radius:999px;
+  box-shadow:0 10px 30px rgba(232,184,75,.4);transition:transform .15s,box-shadow .15s;
+}
+.chat-launcher:hover{transform:translateY(-2px);box-shadow:0 14px 36px rgba(232,184,75,.5)}
+.chat-launcher .cl-ico{font-size:19px;line-height:1}
+.chat-launcher .cl-dot{position:absolute;top:-3px;right:-3px;width:14px;height:14px;border-radius:50%;background:var(--green);border:2px solid var(--bg);box-shadow:0 0 10px var(--green)}
+.chat-launcher.hide{display:none}
+@media(max-width:700px){.chat-launcher{bottom:86px;right:16px}.chat-launcher .cl-txt{display:none}.chat-launcher{padding:15px;border-radius:50%}}
+
+.chat-panel{
+  position:fixed;right:22px;bottom:92px;z-index:86;width:372px;max-width:calc(100vw - 32px);
+  height:560px;max-height:calc(100vh - 130px);
+  background:var(--panel);border:1px solid var(--line);border-radius:20px;overflow:hidden;
+  display:none;flex-direction:column;box-shadow:0 30px 80px rgba(0,0,0,.6);
+}
+.chat-panel.open{display:flex;animation:chatIn .22s ease}
+@keyframes chatIn{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+@media(max-width:700px){.chat-panel{right:12px;left:12px;bottom:150px;width:auto;max-width:none;height:min(66vh,540px)}}
+.chat-head{
+  display:flex;align-items:center;gap:12px;padding:16px 18px;background:var(--panel-2);border-bottom:1px solid var(--line);flex-shrink:0;
+}
+.chat-head .ca{width:40px;height:40px;border-radius:12px;background:linear-gradient(160deg,var(--gold-2),var(--gold));color:#241A04;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:18px;flex-shrink:0}
+.chat-head .ci{flex:1;min-width:0}
+.chat-head .cn{font-weight:800;font-size:15px;display:flex;align-items:center;gap:7px}
+.chat-head .cn .v{color:var(--green);font-size:13px}
+.chat-head .cs{font-family:var(--mono);font-size:11px;color:var(--green);display:flex;align-items:center;gap:6px}
+.chat-head .cs i{width:7px;height:7px;border-radius:50%;background:var(--green);box-shadow:0 0 8px var(--green);animation:pulse 1.6s infinite}
+.chat-close{background:none;border:none;color:var(--muted);font-size:22px;cursor:pointer;line-height:1;padding:4px 6px}
+.chat-close:hover{color:var(--text)}
+.chat-body{flex:1;overflow-y:auto;padding:18px;display:flex;flex-direction:column;gap:12px;scroll-behavior:smooth}
+.chat-body::-webkit-scrollbar{width:7px}.chat-body::-webkit-scrollbar-thumb{background:var(--line);border-radius:4px}
+.msg{max-width:86%;font-size:14px;line-height:1.55;padding:12px 15px;border-radius:14px;word-wrap:break-word}
+.msg.bot{align-self:flex-start;background:var(--panel-2);border:1px solid var(--line);border-top-left-radius:5px}
+.msg.user{align-self:flex-end;background:linear-gradient(180deg,var(--gold-2),var(--gold));color:#241A04;border-top-right-radius:5px;font-weight:600}
+.msg.bot b{color:var(--gold-2)}
+.msg.bot a{color:var(--green);font-weight:700;text-decoration:underline;text-underline-offset:2px}
+.msg.bot ol,.msg.bot ul{margin:8px 0 0 18px;display:flex;flex-direction:column;gap:5px}
+.msg.bot .tip{display:block;margin-top:9px;font-size:12.5px;color:var(--muted);border-top:1px solid var(--line);padding-top:8px}
+.chat-chips{display:flex;flex-wrap:wrap;gap:8px;padding:0 18px 12px}
+.chat-chips .chip{
+  background:rgba(232,184,75,.08);border:1px solid rgba(232,184,75,.3);color:var(--gold-2);
+  font-family:inherit;font-size:12.5px;font-weight:600;padding:8px 13px;border-radius:999px;cursor:pointer;transition:background .15s,border-color .15s;
+}
+.chat-chips .chip:hover{background:rgba(232,184,75,.16);border-color:var(--gold)}
+.chat-input{display:flex;gap:9px;padding:12px 14px;border-top:1px solid var(--line);background:var(--panel-2);flex-shrink:0}
+.chat-input input{flex:1;background:#0A0E12;border:1px solid var(--line);border-radius:12px;padding:12px 14px;color:var(--text);font-family:inherit;font-size:14px;outline:none}
+.chat-input input:focus{border-color:var(--gold)}
+.chat-input button{background:linear-gradient(180deg,var(--gold-2),var(--gold));border:none;color:#241A04;width:44px;border-radius:12px;cursor:pointer;font-size:18px;flex-shrink:0}
+.chat-typing{align-self:flex-start;display:flex;gap:4px;padding:14px 16px;background:var(--panel-2);border:1px solid var(--line);border-radius:14px;border-top-left-radius:5px}
+.chat-typing i{width:7px;height:7px;border-radius:50%;background:var(--muted);animation:blink 1.2s infinite}
+.chat-typing i:nth-child(2){animation-delay:.2s}.chat-typing i:nth-child(3){animation-delay:.4s}
+@keyframes blink{0%,60%,100%{opacity:.3}30%{opacity:1}}
+
 /* ---------- Reveal ---------- */
 .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
 .reveal.on{opacity:1;transform:none}
@@ -473,6 +531,27 @@ a{color:inherit}
   </div>
 </footer>
 
+<!-- ================= ASISTENTE CDT (CHAT) ================= -->
+<button class="chat-launcher" id="chat-launcher" aria-label="Abrir asistente CDT">
+  <span class="cl-ico">💬</span><span class="cl-txt">¿Dudas? Pregúntame</span><span class="cl-dot"></span>
+</button>
+<div class="chat-panel" id="chat-panel" role="dialog" aria-label="Asistente CDT">
+  <div class="chat-head">
+    <div class="ca">D</div>
+    <div class="ci">
+      <div class="cn">Asistente CDT <span class="v" title="Verificado">✔</span></div>
+      <div class="cs"><i></i> En línea · responde al instante</div>
+    </div>
+    <button class="chat-close" id="chat-close" aria-label="Cerrar">×</button>
+  </div>
+  <div class="chat-body" id="chat-body"></div>
+  <div class="chat-chips" id="chat-chips"></div>
+  <form class="chat-input" id="chat-input">
+    <input type="text" id="chat-text" placeholder="Escribe tu pregunta…" autocomplete="off" aria-label="Escribe tu pregunta">
+    <button type="submit" aria-label="Enviar">➤</button>
+  </form>
+</div>
+
 <!-- ================= BARRA FIJA MÓVIL ================= -->
 <div class="mobile-bar">
   <a href="https://www.bitgetapps.com/es/referral/register?clacCode=GWFJBWRL&from=%2Fes%2Fevents%2Freferral-all-program&source=events&utmSource=PremierInviter" target="_blank" rel="noopener" class="btn btn-gold">Registrarme como referido →</a>
@@ -607,6 +686,185 @@ a{color:inherit}
       }
     })
     .catch(function () {});
+
+  /* ============================================================
+     ASISTENTE CDT — respuestas guiadas a las dudas frecuentes
+  ============================================================ */
+  var REG = 'https://www.bitgetapps.com/es/referral/register?clacCode=GWFJBWRL&from=%2Fes%2Fevents%2Freferral-all-program&source=events&utmSource=PremierInviter';
+  var COPY = 'https://share.bitget.com/copy-trading/futures-trader/1463115043756265472?inviteCode=ZHyw5cRm&clacCode=GWFJBWRL';
+  var MAIL = 'davidninaja1997@gmail.com';
+
+  var KB = [
+    {
+      id: 'registro', chip: '📝 Cómo registrarme',
+      keys: ['registr', 'crear cuenta', 'crear mi cuenta', 'abrir cuenta', 'cuenta nueva', 'como empiezo', 'empezar', 'inscrib', 'unirme', 'afiliar', 'referido'],
+      a: 'Registrarte con mi enlace es lo que te hace <b>referido CDT</b> (sin eso no accedes al programa). Así de fácil:<ol>' +
+         '<li>Toca <a href="' + REG + '" target="_blank" rel="noopener">este enlace de registro CDT</a>.</li>' +
+         '<li>Ingresa tu correo o número de teléfono y crea una contraseña.</li>' +
+         '<li>Escribe el código de verificación que te llega.</li>' +
+         '<li>¡Listo! Quedas vinculado a CDT automáticamente.</li></ol>' +
+         '<span class="tip">Si ya tenías una cuenta de Bitget antigua, no cuenta como referida. Escríbeme antes de depositar.</span>'
+    },
+    {
+      id: 'kyc', chip: '🪪 Verificar mi KYC',
+      keys: ['kyc', 'verific', 'identidad', 'documento', 'dni', 'pasaporte', 'selfie', 'validar cuenta'],
+      a: 'El KYC (verificación de identidad) lo necesitas para depositar, copiar y retirar sin límites. En la app de Bitget:<ol>' +
+         '<li>Toca tu <b>foto de perfil</b> (arriba a la izquierda).</li>' +
+         '<li>Entra a <b>“Verificación de identidad”</b> (Identity Verification).</li>' +
+         '<li>Elige tu país y tipo de documento (DNI o pasaporte).</li>' +
+         '<li>Toma foto del documento (frente y reverso) y una selfie.</li>' +
+         '<li>Envía y espera la aprobación — suele tardar solo unos minutos.</li></ol>' +
+         '<span class="tip">Usa tu nombre real: debe coincidir con tu documento o el retiro puede fallar.</span>'
+    },
+    {
+      id: 'uid', chip: '🔢 Dónde está mi UID',
+      keys: ['uid', 'id de bitget', 'mi id', 'numero de usuario', 'identificador', 'donde esta mi id', 'cual es mi id', 'bono'],
+      a: 'Tu <b>UID</b> es el número de tu cuenta de Bitget — lo necesitas para reclamar tu <b>bono de $10</b>. Para encontrarlo:<ul>' +
+         '<li><b>En la app:</b> toca tu foto de perfil (arriba a la izquierda). Tu UID aparece como un número debajo de tu nombre. Tócalo para copiarlo.</li>' +
+         '<li><b>En la web:</b> pon el cursor sobre tu perfil (arriba a la derecha) y verás el UID en el menú.</li></ul>' +
+         '<span class="tip">Cuando lo tengas, déjalo en el formulario de <a href="#garantia">“Reclama tu bono de $10”</a> aquí en la página.</span>'
+    },
+    {
+      id: 'retiro', chip: '💸 Cómo retirar ganancias',
+      keys: ['retir', 'sacar', 'withdraw', 'cobrar', 'ganancias', 'mi dinero', 'transferir'],
+      a: 'Tu dinero es tuyo y lo retiras cuando quieras. Pasos en Bitget:<ol>' +
+         '<li>Si copiaste en Futuros, primero pasa el saldo a tu billetera <b>Spot</b> (Activos → Transferir).</li>' +
+         '<li>Ve a <b>Activos → Retirar</b> y elige <b>USDT</b>.</li>' +
+         '<li>Elige la <b>red</b> (por ejemplo TRC20, la más barata) — debe ser la misma que tu billetera de destino.</li>' +
+         '<li>Pega tu dirección de retiro y el monto.</li>' +
+         '<li>Confirma con tu código de seguridad.</li></ol>' +
+         '<span class="tip">⚠️ Revisa dos veces la red y la dirección: los envíos cripto no se pueden deshacer.</span>'
+    },
+    {
+      id: 'minimo', chip: '💵 Mínimo para copiar',
+      keys: ['minimo', 'mínimo', 'cuanto necesito', 'cuánto necesito', 'cuanto invierto', 'deposit', 'monto', '100', 'cuanto poner'],
+      a: 'El mínimo para copiarme es de <b>$100 USDT</b>. Puedes empezar con eso, ver cómo funciona y escalar cuando te sientas cómodo. ' +
+         'Recuerda: con $100 o más también activas tu <b>bono de $10</b> y la <b>protección anti-liquidación</b> (reembolso de hasta $100).'
+    },
+    {
+      id: 'copiar', chip: '📈 Cómo copiar',
+      keys: ['copiar', 'copytrading', 'copy trading', 'seguir', 'replicar', 'como copio', 'empezar a copiar'],
+      a: 'Una vez que eres referido CDT y tienes fondos ($100 mínimo):<ol>' +
+         '<li>Abre <a href="' + COPY + '" target="_blank" rel="noopener">mi perfil de copytrading</a>.</li>' +
+         '<li>Toca <b>“Copiar”</b> y asigna el monto que quieres destinar.</li>' +
+         '<li>Confirma. Desde ahí, cuando yo abro una operación, tú la abres; cuando cierro, tú cierras — todo automático.</li></ol>' +
+         '<span class="tip">El botón solo funciona si tu cuenta se registró con mi enlace CDT.</span>'
+    },
+    {
+      id: 'garantia', chip: '🛡️ Bono y protección',
+      keys: ['garantia', 'garantía', 'proteccion', 'protección', 'reembolso', 'liquidacion', 'liquidación', 'bono 10', 'diez dolares', 'devuelv'],
+      a: 'Como referido CDT tienes dos respaldos:<ul>' +
+         '<li>🎁 <b>Bono de bienvenida de $10</b> — lo reclamas con tu UID de Bitget en el formulario de la página.</li>' +
+         '<li>🛡️ <b>Protección anti-liquidación</b> — si copiándome tu cuenta se liquida por completo, te reembolsamos <b>hasta $100</b>.</li></ul>' +
+         '<span class="tip">Aplica solo a cuentas nuevas referidas que copien con mínimo $100. <a href="#garantia">Ver los detalles y reclamar aquí →</a></span>'
+    },
+    {
+      id: 'seguridad', chip: '🔒 ¿Es seguro?',
+      keys: ['seguro', 'seguridad', 'estafa', 'confiable', 'mi dinero esta', 'roban', 'custodia', 'pasa por ustedes'],
+      a: 'Sí. Tu capital <b>siempre vive en tu propia cuenta de Bitget</b>, a tu nombre y con tu KYC. ' +
+         'Ni yo ni CDT podemos tocar, mover o retirar tu dinero — solo se <b>replican las operaciones</b>. ' +
+         'Bitget es uno de los exchanges más grandes del mundo, y mi historial de trader es público y verificable.' +
+         '<span class="tip">El trading tiene riesgo real: opera solo con dinero que puedas permitirte arriesgar.</span>'
+    }
+  ];
+
+  var FALLBACK = 'Buena pregunta 🙌 Esa la respondo yo mismo directo. Escríbeme a <a href="mailto:' + MAIL + '">' + MAIL + '</a> y te ayudo personalmente. ' +
+    'Mientras tanto, ¿te sirve alguno de estos temas? 👇';
+
+  var WELCOME = '¡Hola! 👋 Soy el asistente de <b>Club del Trader</b>. Te ayudo a empezar a copiar mis estrategias. ' +
+    '¿Sobre qué tienes dudas? Toca un tema o escríbeme tu pregunta:';
+
+  var launcher = document.getElementById('chat-launcher');
+  var panel = document.getElementById('chat-panel');
+  var closeBtn = document.getElementById('chat-close');
+  var body = document.getElementById('chat-body');
+  var chips = document.getElementById('chat-chips');
+  var inputForm = document.getElementById('chat-input');
+  var inputText = document.getElementById('chat-text');
+  var started = false;
+
+  function scrollDown() { body.scrollTop = body.scrollHeight; }
+
+  function addMsg(text, who) {
+    var d = document.createElement('div');
+    d.className = 'msg ' + who;
+    d.innerHTML = text;
+    body.appendChild(d);
+    scrollDown();
+    return d;
+  }
+
+  function botReply(html) {
+    var typing = document.createElement('div');
+    typing.className = 'chat-typing';
+    typing.innerHTML = '<i></i><i></i><i></i>';
+    body.appendChild(typing);
+    scrollDown();
+    setTimeout(function () {
+      typing.remove();
+      addMsg(html, 'bot');
+    }, 550);
+  }
+
+  function renderChips() {
+    chips.innerHTML = '';
+    KB.forEach(function (item) {
+      var b = document.createElement('button');
+      b.type = 'button';
+      b.className = 'chip';
+      b.textContent = item.chip;
+      b.addEventListener('click', function () {
+        addMsg(item.chip.replace(/^[^\s]+\s/, ''), 'user');
+        botReply(item.a);
+      });
+      chips.appendChild(b);
+    });
+  }
+
+  function normaliza(s) {
+    return s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+  }
+
+  function responder(q) {
+    var n = normaliza(q);
+    var best = null, bestScore = 0;
+    KB.forEach(function (item) {
+      var score = 0;
+      item.keys.forEach(function (k) {
+        if (n.indexOf(normaliza(k)) !== -1) score += k.length;
+      });
+      if (score > bestScore) { bestScore = score; best = item; }
+    });
+    if (best && bestScore > 0) return best.a;
+    return FALLBACK;
+  }
+
+  function openChat() {
+    panel.classList.add('open');
+    launcher.classList.add('hide');
+    if (!started) {
+      started = true;
+      botReply(WELCOME);
+      renderChips();
+    }
+    setTimeout(function () { inputText.focus(); }, 260);
+    if (window.gtag) gtag('event', 'chat_abierto', {});
+  }
+  function closeChat() {
+    panel.classList.remove('open');
+    launcher.classList.remove('hide');
+  }
+
+  launcher.addEventListener('click', openChat);
+  closeBtn.addEventListener('click', closeChat);
+  inputForm.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var q = inputText.value.trim();
+    if (!q) return;
+    addMsg(q, 'user');
+    inputText.value = '';
+    botReply(responder(q));
+  });
 })();
 </script>
 </body>
