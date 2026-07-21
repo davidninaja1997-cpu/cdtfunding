@@ -3,11 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Club del Trader — Copia a David en Bitget · Solo referidos CDT</title>
-<meta name="description" content="Copia en automático las operaciones de David (Clubdeltrader) en Bitget. Acceso solo para referidos CDT. Bono de bienvenida de $20 y protección anti-liquidación de hasta $100.">
+<title>Club del Trader — Copia a David en Bitget · Copytrading público</title>
+<meta name="description" content="Copia en automático las operaciones de David (Clubdeltrader) en Bitget. Copytrading público desde $50, solo 100 cupos. Garantía: si tu copy se liquida, te reembolsamos hasta $50.">
 <link rel="canonical" href="https://clubdeltraderfx.com/">
 <meta property="og:title" content="Club del Trader — Copia a David en Bitget">
-<meta property="og:description" content="Copytrading solo para referidos CDT. Bono de $20 y protección anti-liquidación de hasta $100. Mínimo $100 para copiar.">
+<meta property="og:description" content="Copytrading público de Clubdeltrader en Bitget. Copia desde $50, solo 100 cupos, con garantía de hasta $50 si tu copy se liquida.">
 <meta property="og:url" content="https://clubdeltraderfx.com/">
 <meta property="og:type" content="website">
 <meta property="og:image" content="https://clubdeltraderfx.com/assets/og-image.png">
@@ -337,6 +337,23 @@ a{color:inherit}
 @keyframes blink{0%,60%,100%{opacity:.3}30%{opacity:1}}
 
 /* ---------- Reveal ---------- */
+/* ---------- Calculadora de comisiones ---------- */
+.calc-wrap{max-width:640px;margin:0 auto;background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:34px 30px;box-shadow:0 24px 60px rgba(0,0,0,.45)}
+.calc-field{margin-bottom:24px}
+.calc-field .top{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:11px;gap:12px}
+.calc-field label{font-weight:700;font-size:14.5px}
+.calc-field .val{font-family:var(--mono);font-size:15px;color:var(--gold-2);font-weight:600;white-space:nowrap}
+.calc-field input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:6px;border-radius:6px;background:var(--panel-2);outline:none;cursor:pointer}
+.calc-field input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;appearance:none;width:22px;height:22px;border-radius:50%;background:linear-gradient(180deg,var(--gold-2),var(--gold));cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,.5);border:2px solid #241A04}
+.calc-field input[type=range]::-moz-range-thumb{width:22px;height:22px;border-radius:50%;background:var(--gold);cursor:pointer;border:2px solid #241A04}
+.calc-result{margin-top:6px;background:linear-gradient(180deg,rgba(22,216,154,.09),rgba(22,216,154,.03));border:1px solid rgba(22,216,154,.35);border-radius:16px;padding:26px;text-align:center}
+.calc-result .cr-l{font-family:var(--mono);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.calc-result .cr-v{font-size:clamp(34px,7vw,52px);font-weight:900;color:var(--green);letter-spacing:-.02em;margin:6px 0;line-height:1}
+.calc-result .cr-sub{font-size:13px;color:var(--muted)}
+.calc-note{margin-top:16px;font-family:var(--mono);font-size:11px;color:var(--muted);text-align:center;line-height:1.5}
+.calc-cta{margin-top:22px;text-align:center}
+@media(max-width:600px){.calc-cta .btn{width:100%}}
+
 .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
 .reveal.on{opacity:1;transform:none}
 @media(prefers-reduced-motion:reduce){
@@ -356,8 +373,8 @@ a{color:inherit}
       <span>Club del <span class="gold">Trader</span></span>
     </a>
     <div class="header-cta">
-      <a href="#garantia" class="chip-garantia">🎁 Bono de $20 al depositar $100</a>
-      <a href="https://www.bitgetapps.com/es/referral/register?clacCode=GWFJBWRL&from=%2Fes%2Fevents%2Freferral-all-program&source=events&utmSource=PremierInviter" target="_blank" rel="noopener" class="btn btn-gold">Ser referido CDT</a>
+      <a href="#garantia" class="chip-garantia">🛡️ Garantía de $50</a>
+      <a href="https://share.glassgs.com/sl/9C477AH10NSM" target="_blank" rel="noopener" class="btn btn-gold">Copiar ahora</a>
     </div>
   </div>
 </header>
@@ -365,34 +382,15 @@ a{color:inherit}
 <!-- ================= HERO ================= -->
 <section class="hero">
   <div class="container">
-    <div class="hero-badge reveal on"><span class="dot"></span> PROGRAMA CERRADO · SOLO REFERIDOS CDT</div>
+    <div class="hero-badge reveal on"><span class="dot"></span> COPYTRADING PÚBLICO · SOLO 100 CUPOS</div>
     <h1 class="reveal on">Copia mis operaciones<br>en <span class="gold">automático</span>.</h1>
-    <p class="lead reveal on">Soy <b>David — Clubdeltrader</b>, más de 10 años operando <b>XAUUSD y BTC</b>. Mi copytrading en Bitget es <b>exclusivo para mis referidos</b>: si no te registras con mi enlace, no podrás entrar al programa.</p>
+    <p class="lead reveal on">Soy <b>David — Clubdeltrader</b>, más de 10 años operando <b>XAUUSD y BTC</b>. Mi perfil de copytrading en Bitget es <b>público</b>: cualquiera puede copiarme desde <b>$50</b>. Pero solo acepto <b>100 copiadores</b>.</p>
     <div class="hero-ctas reveal on">
-      <a href="https://www.bitgetapps.com/es/referral/register?clacCode=GWFJBWRL&from=%2Fes%2Fevents%2Freferral-all-program&source=events&utmSource=PremierInviter" target="_blank" rel="noopener" class="btn btn-gold btn-lg">Registrarme como referido →</a>
+      <a href="https://share.glassgs.com/sl/9C477AH10NSM" target="_blank" rel="noopener" class="btn btn-gold btn-lg">Copiar mi portafolio →</a>
       <a href="#perfil" class="btn btn-ghost btn-lg">Ver mi perfil de trader</a>
     </div>
-    <a href="#garantia" class="hero-garantia-link reveal on">🎁 Deposita 100 USDT, cópiame y recibe un bono de $20 al tercer día →</a>
-    <p class="hero-note reveal on">Registro gratis · Desde $100 para copiar · Tu dinero siempre en TU cuenta de Bitget · Retiras cuando quieras</p>
-  </div>
-</section>
-
-<!-- ================= REGLA: SOLO REFERIDOS ================= -->
-<section id="referido" style="padding-top:20px">
-  <div class="container">
-    <div class="rule-box reveal">
-      <div class="candado">🔒</div>
-      <h2>Para copiarme, <span class="gold">tienes que ser mi referido</span></h2>
-      <p>Mi copytrading no es abierto al público. Solo acepto copiadores dentro del <b>programa CDT</b>, y la única puerta de entrada es registrarte en Bitget con mi enlace oficial. Bitget valida el vínculo automáticamente — no hay códigos que escribir ni nada que reclamar.</p>
-      <div class="rule-steps">
-        <div class="rs"><span class="ico">✅</span><span><b>Con mi enlace:</b> acceso al copytrading, bono de bienvenida de $20, protección anti-liquidación, descuento en comisiones y acompañamiento directo de la comunidad CDT.</span></div>
-        <div class="rs"><span class="ico">🚫</span><span><b>Sin mi enlace:</b> no entras al programa. No hay bono, no hay protección y no formas parte del grupo de copiadores CDT.</span></div>
-      </div>
-      <div class="rule-warn">⚠️ Si ya creaste tu cuenta de Bitget por otro lado, no quedas vinculado como referido CDT. Escríbenos antes de depositar para revisar tu caso.</div>
-      <div style="margin-top:30px">
-        <a href="https://www.bitgetapps.com/es/referral/register?clacCode=GWFJBWRL&from=%2Fes%2Fevents%2Freferral-all-program&source=events&utmSource=PremierInviter" target="_blank" rel="noopener" class="btn btn-gold btn-lg">Crear mi cuenta de referido →</a>
-      </div>
-    </div>
+    <a href="#garantia" class="hero-garantia-link reveal on">🛡️ Garantía: si copiándome se liquida tu cuenta, te reembolsamos hasta $50 →</a>
+    <p class="hero-note reveal on">Desde $50 para copiar · Solo 100 cupos · Tu dinero siempre en TU cuenta de Bitget · Retiras cuando quieras</p>
   </div>
 </section>
 
@@ -416,15 +414,15 @@ a{color:inherit}
       <p class="kol-bio">Más de <b>10 años operando</b> oro y Bitcoin con una metodología simple y repetible: <b>riesgo controlado por operación</b> y gestión estricta. Sin martingalas, sin apalancamiento suicida. Cuando yo abro, tú abres; cuando cierro, tú cierras — todo automático.</p>
       <div class="kol-stats">
         <div class="ks"><div class="v green">+824.66</div><div class="l">PnL del portafolio (USDT)</div></div>
-        <div class="ks"><div class="v green">+320</div><div class="l">Ganancia de copiadores (USDT)</div></div>
         <div class="ks"><div class="v">20%</div><div class="l">Profit share — solo gano si tú ganas</div></div>
-        <div class="ks"><div class="v">$100</div><div class="l">Mínimo para copiar</div></div>
+        <div class="ks"><div class="v">$50</div><div class="l">Mínimo para copiar</div></div>
+        <div class="ks"><div class="v">100</div><div class="l">Cupos máximo</div></div>
       </div>
       <div class="kol-actions">
         <a href="https://share.glassgs.com/sl/9C477AH10NSM" target="_blank" rel="noopener" class="btn btn-gold" id="btn-copiar">Copiar a Clubdeltrader →</a>
         <a href="https://www.bitgetapps.com/es/referral/register?clacCode=GWFJBWRL&from=%2Fes%2Fevents%2Freferral-all-program&source=events&utmSource=PremierInviter" target="_blank" rel="noopener" class="btn btn-ghost">Aún no tengo cuenta</a>
       </div>
-      <p class="kol-note">⚠️ El botón "Copiar" solo funciona si tu cuenta es referida CDT y con un mínimo de $100 para copiar. ¿No eres referido todavía? <a href="https://www.bitgetapps.com/es/referral/register?clacCode=GWFJBWRL&from=%2Fes%2Fevents%2Freferral-all-program&source=events&utmSource=PremierInviter" target="_blank" rel="noopener">Regístrate primero aquí</a>.</p>
+      <p class="kol-note">🔥 Mi perfil de copytrading es <b>público</b>: cualquiera puede copiarme desde <b>$50</b>. Solo hay <b>100 cupos</b>. ¿No tienes cuenta en Bitget? <a href="https://www.bitgetapps.com/es/referral/register?clacCode=GWFJBWRL&from=%2Fes%2Fevents%2Freferral-all-program&source=events&utmSource=PremierInviter" target="_blank" rel="noopener">Créala aquí</a>.</p>
       <span id="stats-fecha">Estadísticas del portafolio público en Bitget</span>
     </div>
   </div>
@@ -435,30 +433,18 @@ a{color:inherit}
   <div class="container">
     <div class="g-box reveal">
       <div class="g-head">
-        <div class="shield">🎁</div>
-        <h2>Bono de <span class="green">$20</span> para mis referidos<br>+ protección si algo sale mal</h2>
-        <p>Regístrate con mi enlace, <b>deposita 100 USDT</b> y <b>copia mi portafolio</b>: al <b>tercer día</b> te envío un <b>bono de $20</b>. Y como respaldo: si copiándome tu cuenta se llegara a <b>liquidar por completo</b>, te reembolsamos <b>hasta $100</b>. Empiezas protegido.</p>
-      </div>
-      <div class="g-benes">
-        <div class="bene">
-          <div class="bene-ico">🎁</div>
-          <h4>Bono de $20 por depositar y copiar</h4>
-          <p>Deposita <b>100 USDT</b>, mantenlos <b>3 días</b> y <b>copia mi portafolio</b>. Te enviamos el bono al tercer día, validado con tu <b>ID de Bitget</b>.</p>
-        </div>
-        <div class="bene">
-          <div class="bene-ico">🛡️</div>
-          <h4>Protección anti-liquidación</h4>
-          <p>Si copiándome tu cuenta se <b>liquida por completo</b>, te reembolsamos <b>hasta $100</b>. No te quedas sin nada.</p>
-        </div>
+        <div class="shield">🛡️</div>
+        <h2>Si copiándome pierdes todo,<br><span class="green">te reembolsamos hasta $50</span></h2>
+        <p>Copiar tiene riesgo, y lo respaldo: si copiándome tu cuenta se llegara a <b>liquidar por completo</b>, te devolvemos <b>hasta $50</b>. Así pruebas mi copytrading con una red de seguridad.</p>
       </div>
       <div class="g-como">
-        <div class="gc"><span class="g-num">1</span><span><b>Regístrate con el enlace CDT</b> y completa tu verificación de identidad (KYC). Solo aplica a cuentas nuevas.</span></div>
-        <div class="gc"><span class="g-num">2</span><span><b>Deposita 100 USDT y copia mi portafolio.</b> Al copiarme generas el volumen de trading requerido. Mantén los fondos 3 días.</span></div>
-        <div class="gc"><span class="g-num">3</span><span><b>Deja tu ID de Bitget y tu correo</b> en el formulario. Al tercer día te enviamos tu <b>bono de $20</b> — y quedas con la protección anti-liquidación de hasta $100.</span></div>
+        <div class="gc"><span class="g-num">1</span><span><b>Copia mi portafolio</b> con un mínimo de $50. Mi perfil de copytrading es público — cualquiera puede copiarme.</span></div>
+        <div class="gc"><span class="g-num">2</span><span><b>Deja tu correo aquí</b> (y tu ID de Bitget) para activar tu garantía. Ese registro es tu comprobante.</span></div>
+        <div class="gc"><span class="g-num">3</span><span><b>¿Tu cuenta se liquidó por completo copiándome?</b> Escríbenos desde ese correo con la captura y te reembolsamos hasta $50.</span></div>
       </div>
       <form class="g-form" id="form-garantia" novalidate>
-        <h3>Reclama tu bono de $20</h3>
-        <p class="sub">Deja tus datos ahora. Al tercer día validamos tu depósito de 100 USDT y te enviamos el bono.</p>
+        <h3>Activa tu garantía</h3>
+        <p class="sub">Deja tus datos para poder procesarte el reembolso si tu copy se liquidara.</p>
         <div class="g-field">
           <label for="g-nombre">Tu nombre</label>
           <input type="text" id="g-nombre" name="nombre" placeholder="Ej. Juan Pérez" required autocomplete="name">
@@ -468,13 +454,13 @@ a{color:inherit}
           <input type="email" id="g-correo" name="correo" placeholder="tucorreo@ejemplo.com" required autocomplete="email">
         </div>
         <div class="g-field">
-          <label for="g-uid">Tu UID de Bitget <span class="opc">(obligatorio — lo ves en tu perfil de Bitget)</span></label>
-          <input type="text" id="g-uid" name="uid_bitget" placeholder="Ej. 1234567890" inputmode="numeric" required>
+          <label for="g-uid">Tu UID de Bitget <span class="opc">(opcional — lo ves en tu perfil de Bitget)</span></label>
+          <input type="text" id="g-uid" name="uid_bitget" placeholder="Ej. 1234567890" inputmode="numeric">
         </div>
-        <button type="submit" class="btn btn-green btn-lg btn-block" id="g-submit">🎁 Reclamar mi bono de $20</button>
+        <button type="submit" class="btn btn-green btn-lg btn-block" id="g-submit">🛡️ Activar mi garantía de $50</button>
         <div class="g-msg" id="g-msg" role="status"></div>
       </form>
-      <p class="g-cond">Válido solo para cuentas nuevas referidas CDT · Bono de $20 por: KYC + depósito de 100 USDT mantenido 3 días + copiar mi portafolio (volumen 100 USDT), entregado al 3.er día · Un bono por usuario · Reembolso por liquidación: máximo $100 por usuario · Sujeto a verificación · Aplican condiciones</p>
+      <p class="g-cond">Copytrading público · Mínimo $50 para copiar · Cupos limitados a 100 · Reembolso solo por liquidación total del copy: máximo $50 por usuario · Un reembolso por usuario · Sujeto a verificación · Aplican condiciones</p>
     </div>
   </div>
 </section>
@@ -490,18 +476,52 @@ a{color:inherit}
     <div class="steps">
       <div class="step reveal">
         <div class="step-num">1</div>
-        <h3>Crea tu cuenta de referido</h3>
-        <p><a href="https://www.bitgetapps.com/es/referral/register?clacCode=GWFJBWRL&from=%2Fes%2Fevents%2Freferral-all-program&source=events&utmSource=PremierInviter" target="_blank" rel="noopener">Regístrate en Bitget con el enlace CDT</a>. Bitget te vincula automáticamente — sin este paso no hay acceso al programa.</p>
+        <h3>Crea tu cuenta en Bitget</h3>
+        <p>¿Aún no tienes cuenta? <a href="https://www.bitgetapps.com/es/referral/register?clacCode=GWFJBWRL&from=%2Fes%2Fevents%2Freferral-all-program&source=events&utmSource=PremierInviter" target="_blank" rel="noopener">Créala aquí</a>. Completa el KYC para poder depositar y copiar sin límites.</p>
       </div>
       <div class="step reveal">
         <div class="step-num">2</div>
-        <h3>Verifica y deposita</h3>
-        <p>Completa el KYC y fondea tu cuenta. Puedes empezar con montos pequeños e ir escalando cuando veas cómo funciona.</p>
+        <h3>Deposita desde $50</h3>
+        <p>Fondea tu cuenta con un mínimo de $50. Tu capital vive en tu propia cuenta de Bitget, a tu nombre, y solo tú puedes moverlo.</p>
       </div>
       <div class="step reveal">
         <div class="step-num">3</div>
-        <h3>Deposita, copia y cobra tu bono</h3>
-        <p>Deposita 100 USDT y copia <a href="https://share.glassgs.com/sl/9C477AH10NSM" target="_blank" rel="noopener">mi portafolio</a> (así generas el volumen requerido). Luego <a href="#garantia">deja tu ID de Bitget aquí</a> y al tercer día recibes tu bono de $20.</p>
+        <h3>Copia mi portafolio</h3>
+        <p>Pulsa <a href="https://share.glassgs.com/sl/9C477AH10NSM" target="_blank" rel="noopener">"Copiar" en mi perfil</a> y listo: mis operaciones se replican en automático. Luego <a href="#garantia">activa tu garantía de $50</a>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CALCULADORA DE COMISIONES ================= -->
+<section id="calculadora" style="border-top:1px solid var(--line)">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Gana como afiliado</div>
+      <h2>Trae referidos y <span style="color:var(--gold)">gana comisiones</span></h2>
+      <p>Además de copiar, puedes invitar gente a Bitget con tu enlace y ganar un porcentaje de las comisiones de trading que generen. Calcula tu potencial:</p>
+    </div>
+    <div class="calc-wrap reveal">
+      <div class="calc-field">
+        <div class="top"><label for="c-ref">Número de referidos</label><span class="val" id="c-ref-v">20</span></div>
+        <input type="range" id="c-ref" min="1" max="100" value="20" step="1">
+      </div>
+      <div class="calc-field">
+        <div class="top"><label for="c-vol">Volumen de trading por referido</label><span class="val" id="c-vol-v">$25,000</span></div>
+        <input type="range" id="c-vol" min="0" max="500000" value="25000" step="5000">
+      </div>
+      <div class="calc-field">
+        <div class="top"><label for="c-com">Tu % de comisión</label><span class="val" id="c-com-v">30%</span></div>
+        <input type="range" id="c-com" min="0" max="50" value="30" step="1">
+      </div>
+      <div class="calc-result">
+        <div class="cr-l">Ganancia estimada</div>
+        <div class="cr-v" id="c-out">$0</div>
+        <div class="cr-sub" id="c-sub">—</div>
+      </div>
+      <p class="calc-note">Estimación con una tarifa de trading de futuros de ~0.06%. Las comisiones reales de Bitget varían según el producto y tu nivel de afiliado. Cálculo referencial, no una promesa de ingresos.</p>
+      <div class="calc-cta">
+        <a href="https://www.bitgetapps.com/es/referral/register?clacCode=GWFJBWRL&from=%2Fes%2Fevents%2Freferral-all-program&source=events&utmSource=PremierInviter" target="_blank" rel="noopener" class="btn btn-gold btn-lg">Crear mi cuenta y empezar →</a>
       </div>
     </div>
   </div>
@@ -510,16 +530,16 @@ a{color:inherit}
 <!-- ================= CTA FINAL ================= -->
 <section class="final-cta" style="padding-top:20px">
   <div class="container reveal">
-    <h2>El mercado no te va a esperar.<br><span class="gold">Tu bono tampoco.</span></h2>
-    <p>El programa es exclusivo para referidos CDT. Crea tu cuenta hoy, deposita 100 USDT y recibe tu bono de $20 al tercer día.</p>
-    <a href="https://www.bitgetapps.com/es/referral/register?clacCode=GWFJBWRL&from=%2Fes%2Fevents%2Freferral-all-program&source=events&utmSource=PremierInviter" target="_blank" rel="noopener" class="btn btn-gold btn-lg">Quiero ser referido CDT →</a>
+    <h2>El mercado no te va a esperar.<br><span class="gold">Tu cupo tampoco.</span></h2>
+    <p>Mi copytrading es público, pero solo acepto 100 copiadores. Empieza a copiarme desde $50 y con la garantía activada.</p>
+    <a href="https://share.glassgs.com/sl/9C477AH10NSM" target="_blank" rel="noopener" class="btn btn-gold btn-lg">Copiar mi portafolio →</a>
   </div>
 </section>
 
 <!-- ================= RIESGO ================= -->
 <div class="riesgo">
   <div class="container">
-    <p><b>Aviso de riesgo:</b> el trading de futuros y criptomonedas implica un alto nivel de riesgo y puede no ser adecuado para todos los inversores. Los resultados pasados no garantizan resultados futuros. El copytrading replica operaciones reales con riesgo real: puedes perder parte o la totalidad de tu capital. El bono de $20 aplica únicamente a cuentas nuevas registradas con el enlace de referido CDT que completen la verificación de identidad, depositen 100 USDT netos y los mantengan durante 3 días, y copien el portafolio CDT alcanzando un volumen de trading de 100 USDT; se entrega al tercer día, un solo bono por usuario y sujeto a verificación del ID de Bitget. La protección anti-liquidación aplica a referidos CDT que copien con un mínimo de $100. La protección anti-liquidación cubre únicamente el caso de liquidación total del copytrading, con un reembolso máximo de $100 por usuario, y no las pérdidas parciales propias de la operativa. Club del Trader no custodia fondos ni ofrece asesoría financiera. Invierte solo dinero que puedas permitirte perder.</p>
+    <p><b>Aviso de riesgo:</b> el trading de futuros y criptomonedas implica un alto nivel de riesgo y puede no ser adecuado para todos los inversores. Los resultados pasados no garantizan resultados futuros. El copytrading replica operaciones reales con riesgo real: puedes perder parte o la totalidad de tu capital. La garantía cubre únicamente el caso de liquidación total del copytrading al copiar mi portafolio con un mínimo de $50, con un reembolso máximo de $50 por usuario, un solo reembolso por usuario y sujeto a verificación; no cubre las pérdidas parciales propias de la operativa. La calculadora de comisiones es solo una estimación referencial basada en supuestos de volumen y tarifas; las comisiones reales de afiliado dependen de Bitget y de la actividad de tus referidos, y no representan una promesa de ingresos. Club del Trader no custodia fondos ni ofrece asesoría financiera. Invierte solo dinero que puedas permitirte perder.</p>
   </div>
 </div>
 
@@ -554,7 +574,7 @@ a{color:inherit}
 
 <!-- ================= BARRA FIJA MÓVIL ================= -->
 <div class="mobile-bar">
-  <a href="https://www.bitgetapps.com/es/referral/register?clacCode=GWFJBWRL&from=%2Fes%2Fevents%2Freferral-all-program&source=events&utmSource=PremierInviter" target="_blank" rel="noopener" class="btn btn-gold">Registrarme como referido →</a>
+  <a href="https://share.glassgs.com/sl/9C477AH10NSM" target="_blank" rel="noopener" class="btn btn-gold">Copiar mi portafolio →</a>
 </div>
 
 <script>
@@ -583,45 +603,40 @@ a{color:inherit}
 
     msg.className = 'g-msg';
     if (!nombre || !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(correo)) {
-      msg.textContent = 'Revisa tu nombre y tu correo — los necesitamos para enviarte el bono.';
-      msg.classList.add('err');
-      return;
-    }
-    if (!/^\d{6,}$/.test(uid)) {
-      msg.textContent = 'Necesitamos tu ID (UID) de Bitget para validar que eres mi referido y enviarte el bono.';
+      msg.textContent = 'Revisa tu nombre y tu correo — los necesitamos para poder reembolsarte si tu copy se liquida.';
       msg.classList.add('err');
       return;
     }
 
     btn.disabled = true;
-    btn.textContent = 'Enviando…';
+    btn.textContent = 'Activando…';
 
     fetch(FORM_ENDPOINT, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
       body: JSON.stringify({
-        _subject: '🎁 Nuevo referido CDT — reclamo de bono $20',
+        _subject: '🛡️ Nueva garantía CDT activada',
         _template: 'table',
         nombre: nombre,
         correo: correo,
-        uid_bitget: uid,
+        uid_bitget: uid || '(no indicado)',
         pagina: 'clubdeltraderfx.com'
       })
     })
       .then(function (r) { if (!r.ok) throw new Error('http ' + r.status); return r.json(); })
       .then(function () {
         form.querySelectorAll('input').forEach(function (i) { i.value = ''; });
-        msg.textContent = '✅ ¡Solicitud recibida! Validaremos tu depósito de 100 USDT y que estés copiando mi portafolio; al tercer día te enviaremos tu bono de $20. Tu protección anti-liquidación también queda registrada con este correo.';
+        msg.textContent = '✅ ¡Garantía activada! Guarda este correo: si copiándome tu cuenta se liquidara por completo, escríbenos desde él con la captura y te reembolsamos hasta $50.';
         msg.classList.add('ok');
-        track('lead_bono', {});
+        track('lead_garantia', {});
       })
       .catch(function () {
-        msg.innerHTML = 'No pudimos registrar tu solicitud automáticamente. Escríbenos directo a <b>davidninaja1997@gmail.com</b> con tu ID de Bitget y el asunto "Bono CDT" y te lo enviamos igual.';
+        msg.innerHTML = 'No pudimos registrar tu correo automáticamente. Escríbenos directo a <b>davidninaja1997@gmail.com</b> con el asunto "Garantía CDT" y quedas activado igual.';
         msg.classList.add('err');
       })
       .finally(function () {
         btn.disabled = false;
-        btn.textContent = '🎁 Reclamar mi bono de $20';
+        btn.textContent = '🛡️ Activar mi garantía de $50';
       });
   });
 
@@ -697,13 +712,13 @@ a{color:inherit}
   var KB = [
     {
       id: 'registro', chip: '📝 Cómo registrarme',
-      keys: ['registr', 'crear cuenta', 'crear mi cuenta', 'abrir cuenta', 'cuenta nueva', 'como empiezo', 'empezar', 'inscrib', 'unirme', 'afiliar', 'referido'],
-      a: 'Registrarte con mi enlace es lo que te hace <b>referido CDT</b> (sin eso no accedes al programa). Así de fácil:<ol>' +
-         '<li>Toca <a href="' + REG + '" target="_blank" rel="noopener">este enlace de registro CDT</a>.</li>' +
+      keys: ['registr', 'crear cuenta', 'crear mi cuenta', 'abrir cuenta', 'cuenta nueva', 'como empiezo', 'empezar', 'inscrib', 'unirme', 'afiliar'],
+      a: 'Crear tu cuenta en Bitget es muy fácil:<ol>' +
+         '<li>Toca <a href="' + REG + '" target="_blank" rel="noopener">este enlace de registro</a>.</li>' +
          '<li>Ingresa tu correo o número de teléfono y crea una contraseña.</li>' +
          '<li>Escribe el código de verificación que te llega.</li>' +
-         '<li>¡Listo! Quedas vinculado a CDT automáticamente.</li></ol>' +
-         '<span class="tip">Si ya tenías una cuenta de Bitget antigua, no cuenta como referida. Escríbeme antes de depositar.</span>'
+         '<li>Completa el KYC y ya puedes depositar y copiarme.</li></ol>' +
+         '<span class="tip">Mi copytrading es público: si ya tienes cuenta en Bitget, también puedes copiarme.</span>'
     },
     {
       id: 'kyc', chip: '🪪 Verificar mi KYC',
@@ -718,11 +733,11 @@ a{color:inherit}
     },
     {
       id: 'uid', chip: '🔢 Dónde está mi UID',
-      keys: ['uid', 'id de bitget', 'mi id', 'numero de usuario', 'identificador', 'donde esta mi id', 'cual es mi id', 'bono'],
-      a: 'Tu <b>UID</b> es el número de tu cuenta de Bitget — lo necesitas para reclamar tu <b>bono de $20</b>. Para encontrarlo:<ul>' +
+      keys: ['uid', 'id de bitget', 'mi id', 'numero de usuario', 'identificador', 'donde esta mi id', 'cual es mi id'],
+      a: 'Tu <b>UID</b> es el número de tu cuenta de Bitget — te sirve para activar tu garantía. Para encontrarlo:<ul>' +
          '<li><b>En la app:</b> toca tu foto de perfil (arriba a la izquierda). Tu UID aparece como un número debajo de tu nombre. Tócalo para copiarlo.</li>' +
          '<li><b>En la web:</b> pon el cursor sobre tu perfil (arriba a la derecha) y verás el UID en el menú.</li></ul>' +
-         '<span class="tip">Cuando lo tengas, déjalo en el formulario de <a href="#garantia">“Reclama tu bono de $20”</a> aquí en la página.</span>'
+         '<span class="tip">Cuando lo tengas, déjalo (opcional) en el formulario de <a href="#garantia">“Activa tu garantía”</a> aquí en la página.</span>'
     },
     {
       id: 'retiro', chip: '💸 Cómo retirar ganancias',
@@ -737,26 +752,24 @@ a{color:inherit}
     },
     {
       id: 'minimo', chip: '💵 Mínimo para copiar',
-      keys: ['minimo', 'mínimo', 'cuanto necesito', 'cuánto necesito', 'cuanto invierto', 'deposit', 'monto', '100', 'cuanto poner'],
-      a: 'El mínimo para copiarme es de <b>$100 USDT</b>. Puedes empezar con eso, ver cómo funciona y escalar cuando te sientas cómodo. ' +
-         'Con ese depósito de $100, copiándome (para el volumen requerido) y manteniéndolo 3 días, activas tu <b>bono de $20</b> (te lo enviamos al tercer día) y también la <b>protección anti-liquidación</b> (reembolso de hasta $100 si tu copy se liquida).'
+      keys: ['minimo', 'mínimo', 'cuanto necesito', 'cuánto necesito', 'cuanto invierto', 'deposit', 'monto', '50', 'cuanto poner', 'cupos', 'cupo'],
+      a: 'El mínimo para copiarme es de <b>$50 USDT</b>. Mi perfil de copytrading es <b>público</b>, pero solo acepto <b>100 copiadores</b>, así que los cupos son limitados. ' +
+         'Copiando con $50 o más también activas la <b>garantía</b>: si tu copy se liquidara por completo, te reembolsamos hasta $50.'
     },
     {
       id: 'copiar', chip: '📈 Cómo copiar',
       keys: ['copiar', 'copytrading', 'copy trading', 'seguir', 'replicar', 'como copio', 'empezar a copiar'],
-      a: 'Una vez que eres referido CDT y tienes fondos ($100 mínimo):<ol>' +
-         '<li>Abre <a href="' + COPY + '" target="_blank" rel="noopener">mi perfil de copytrading</a>.</li>' +
+      a: 'Con tu cuenta de Bitget y fondos ($50 mínimo):<ol>' +
+         '<li>Abre <a href="' + COPY + '" target="_blank" rel="noopener">mi perfil de copytrading</a> (es público).</li>' +
          '<li>Toca <b>“Copiar”</b> y asigna el monto que quieres destinar.</li>' +
          '<li>Confirma. Desde ahí, cuando yo abro una operación, tú la abres; cuando cierro, tú cierras — todo automático.</li></ol>' +
-         '<span class="tip">El botón solo funciona si tu cuenta se registró con mi enlace CDT.</span>'
+         '<span class="tip">Cualquiera puede copiarme, pero solo hay 100 cupos disponibles.</span>'
     },
     {
-      id: 'garantia', chip: '🛡️ Bono y protección',
-      keys: ['garantia', 'garantía', 'proteccion', 'protección', 'reembolso', 'liquidacion', 'liquidación', 'bono 20', 'veinte dolares', 'devuelv'],
-      a: 'Como referido CDT tienes dos respaldos:<ul>' +
-         '<li>🎁 <b>Bono de $20</b> — deposita 100 USDT, mantenlos 3 días y copia mi portafolio; te lo enviamos al tercer día, validado con tu UID de Bitget.</li>' +
-         '<li>🛡️ <b>Protección anti-liquidación</b> — si copiándome tu cuenta se liquida por completo, te reembolsamos <b>hasta $100</b>.</li></ul>' +
-         '<span class="tip">Aplica solo a cuentas nuevas referidas que copien con mínimo $100. <a href="#garantia">Ver los detalles y reclamar aquí →</a></span>'
+      id: 'garantia', chip: '🛡️ La garantía de $50',
+      keys: ['garantia', 'garantía', 'proteccion', 'protección', 'reembolso', 'liquidacion', 'liquidación', 'devuelv', 'perder todo'],
+      a: '🛡️ <b>Garantía anti-liquidación:</b> si copiándome tu cuenta se <b>liquida por completo</b>, te reembolsamos <b>hasta $50</b>. Así pruebas mi copytrading con red de seguridad.' +
+         '<span class="tip">Aplica al copiar con mínimo $50. Deja tu correo en <a href="#garantia">“Activa tu garantía”</a> y, si pasara, escríbenos con la captura. <a href="#garantia">Ver detalles →</a></span>'
     },
     {
       id: 'seguridad', chip: '🔒 ¿Es seguro?',
@@ -865,6 +878,27 @@ a{color:inherit}
     inputText.value = '';
     botReply(responder(q));
   });
+})();
+</script>
+<script>
+(function () {
+  'use strict';
+  var cRef = document.getElementById('c-ref'), cVol = document.getElementById('c-vol'), cCom = document.getElementById('c-com');
+  if (!cRef || !cVol || !cCom) return;
+  var FEE = 0.0006; // tarifa de trading de futuros de referencia (~0.06%)
+  function money(n) { return '$' + Math.round(n).toLocaleString('en-US'); }
+  function update() {
+    var ref = +cRef.value, vol = +cVol.value, com = +cCom.value;
+    document.getElementById('c-ref-v').textContent = ref;
+    document.getElementById('c-vol-v').textContent = money(vol);
+    document.getElementById('c-com-v').textContent = com + '%';
+    var totalVol = ref * vol;
+    var earn = totalVol * FEE * (com / 100);
+    document.getElementById('c-out').textContent = money(earn);
+    document.getElementById('c-sub').textContent = 'Con ' + ref + (ref === 1 ? ' referido' : ' referidos') + ' y ' + money(totalVol) + ' de volumen total';
+  }
+  [cRef, cVol, cCom].forEach(function (el) { el.addEventListener('input', update); });
+  update();
 })();
 </script>
 </body>
