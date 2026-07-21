@@ -1,0 +1,18 @@
+[
+  { "img": "01-challenge.png", "title": "Passed FTMO Challenge", "meta": "5 Feb 2026", "tag": "Challenge" },
+  { "img": "02-verification.png", "title": "Passed Verification", "meta": "8 Feb 2026", "tag": "Verification" },
+  { "img": "03-reward.png", "title": "FTMO Reward", "meta": "5 Dic 2025", "amount": "$4,035.10", "tag": "Reward" },
+  { "img": "04-reward.png", "title": "FTMO Reward", "meta": "22 Dic 2025", "amount": "$6,840.11", "tag": "Reward" },
+  { "img": "05-reward.png", "title": "FTMO Reward", "meta": "20 Ene 2026", "amount": "$4,863.01", "tag": "Reward" },
+  { "img": "06-reward.png", "title": "FTMO Reward", "meta": "—", "tag": "Reward" },
+  { "img": "07-reward.png", "title": "FTMO Reward", "meta": "—", "tag": "Reward" },
+  { "img": "08-challenge.png", "title": "Passed FTMO Challenge", "meta": "—", "tag": "Challenge" },
+  { "img": "09-verification.png", "title": "Passed Verification", "meta": "—", "tag": "Verification" },
+  { "img": "10-reward.png", "title": "FTMO Reward", "meta": "—", "tag": "Reward" },
+  { "img": "11-reward.png", "title": "FTMO Reward", "meta": "—", "tag": "Reward" },
+  { "img": "12-challenge.png", "title": "Passed FTMO Challenge", "meta": "—", "tag": "Challenge" },
+  { "img": "13-verification.png", "title": "Passed Verification", "meta": "—", "tag": "Verification" },
+  { "img": "14-reward.png", "title": "FTMO Reward", "meta": "—", "tag": "Reward" },
+  { "img": "15-reward.png", "title": "FTMO Reward", "meta": "—", "tag": "Reward" },
+  { "img": "16-reward.png", "title": "FTMO Reward", "meta": "—", "tag": "Reward" }
+]
