@@ -407,23 +407,23 @@ a{color:inherit}
         <div class="kol-avatar">D</div>
         <div>
           <div class="kol-name">Clubdeltrader <span class="kol-verified" title="Trader verificado">✔</span></div>
-          <div class="kol-meta">David · Bitget Elite Trader · XAUUSD / BTCUSDT Futures</div>
+          <div class="kol-meta">David · Trader Elite de Gold/Indices · Bitget</div>
           <div class="kol-live"><i></i> OPERANDO EN VIVO</div>
         </div>
       </div>
       <p class="kol-bio">Más de <b>10 años operando</b> oro y Bitcoin con una metodología simple y repetible: <b>riesgo controlado por operación</b> y gestión estricta. Sin martingalas, sin apalancamiento suicida. Cuando yo abro, tú abres; cuando cierro, tú cierras — todo automático.</p>
       <div class="kol-stats">
-        <div class="ks"><div class="v green">+824.66</div><div class="l">PnL del portafolio (USDT)</div></div>
-        <div class="ks"><div class="v">20%</div><div class="l">Profit share — solo gano si tú ganas</div></div>
-        <div class="ks"><div class="v">$50</div><div class="l">Mínimo para copiar</div></div>
-        <div class="ks"><div class="v">100</div><div class="l">Cupos máximo</div></div>
+        <div class="ks"><div class="v green">+81.79%</div><div class="l">ROI · 7 días</div></div>
+        <div class="ks"><div class="v green">+435.94</div><div class="l">Retornos totales (USDT)</div></div>
+        <div class="ks"><div class="v green">100%</div><div class="l">Tasa de éxito</div></div>
+        <div class="ks"><div class="v">+26.41</div><div class="l">Ganancia de copiadores (USDT)</div></div>
       </div>
       <div class="kol-actions">
         <a href="https://share.glassgs.com/sl/9C477AH10NSM" target="_blank" rel="noopener" class="btn btn-gold" id="btn-copiar">Copiar a Clubdeltrader →</a>
         <a href="https://www.bitgetapps.com/es/referral/register?clacCode=GWFJBWRL&from=%2Fes%2Fevents%2Freferral-all-program&source=events&utmSource=PremierInviter" target="_blank" rel="noopener" class="btn btn-ghost">Aún no tengo cuenta</a>
       </div>
       <p class="kol-note">🔥 Mi perfil de copytrading es <b>público</b>: cualquiera puede copiarme desde <b>$50</b>. Solo hay <b>100 cupos</b>. ¿No tienes cuenta en Bitget? <a href="https://www.bitgetapps.com/es/referral/register?clacCode=GWFJBWRL&from=%2Fes%2Fevents%2Freferral-all-program&source=events&utmSource=PremierInviter" target="_blank" rel="noopener">Créala aquí</a>.</p>
-      <span id="stats-fecha">Estadísticas del portafolio público en Bitget</span>
+      <span id="stats-fecha">Datos verificados en Bitget · Actualizado 21 jul 2026</span>
     </div>
   </div>
 </section>
@@ -688,19 +688,8 @@ a{color:inherit}
     a.addEventListener('click', function () { track('click_copiar', { trader: 'Clubdeltrader' }); });
   });
 
-  /* ---- Estadísticas en vivo del portafolio (assets/stats.json) ---- */
-  fetch('assets/stats.json', { cache: 'no-store' })
-    .then(function (r) { return r.ok ? r.json() : null; })
-    .then(function (s) {
-      if (!s || !s.updatedAt) return;
-      var f = document.getElementById('stats-fecha');
-      if (f) {
-        var d = new Date(s.updatedAt);
-        f.textContent = 'Estadísticas del portafolio público en Bitget · Actualizado: ' +
-          d.toLocaleDateString('es-PE', { day: '2-digit', month: 'short', year: 'numeric' });
-      }
-    })
-    .catch(function () {});
+  /* Estadísticas actualizadas manualmente (Bitget no ofrece API oficial
+     para el copytrading de CFD). Se editan a mano en el bloque .kol-stats. */
 
   /* ============================================================
      ASISTENTE CDT — respuestas guiadas a las dudas frecuentes
