@@ -1,0 +1,17 @@
+{
+  "name": "granja-ciudad-cdt",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Granja & Ciudad CDT — juego web social farm/city (Fase 1: render isométrico y colocación)",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node server/server.js",
+    "simulate": "node tools/simulate.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

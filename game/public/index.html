@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<title>Granja &amp; Ciudad CDT</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Ctext y='14' font-size='14'%3E%F0%9F%8C%BE%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- Barra superior de recursos -->
+<header class="topbar">
+  <div class="tb-left">
+    <div class="tb-logo">🌾<span>Granja &amp; Ciudad <b>CDT</b></span></div>
+  </div>
+  <div class="tb-res">
+    <div class="res" title="Monedas"><span class="ic">🪙</span><span id="res-coins">2.500</span></div>
+    <div class="res" title="Gemas"><span class="ic">💎</span><span id="res-gems">10</span></div>
+    <div class="res" title="Energía"><span class="ic">⚡</span><span id="res-energy">25</span></div>
+    <div class="res" title="Nivel"><span class="ic">⭐</span><span id="res-level">1</span></div>
+  </div>
+  <div class="tb-right">
+    <button class="view-toggle" id="view-toggle" aria-label="Alternar vista">
+      <span class="vt-farm on">🌾 Granja</span><span class="vt-city">🏙️ Ciudad</span>
+    </button>
+  </div>
+</header>
+
+<!-- Lienzo del mundo -->
+<canvas id="world" aria-label="Mundo isométrico"></canvas>
+
+<!-- Aviso de modo colocación -->
+<div class="place-hint" id="place-hint" hidden>
+  <span id="place-name">Colocando…</span>
+  <button id="place-cancel" aria-label="Cancelar">✕ Cancelar</button>
+</div>
+
+<!-- Tienda inferior con pestañas -->
+<footer class="shop">
+  <div class="shop-tabs" id="shop-tabs"></div>
+  <div class="shop-items" id="shop-items"></div>
+</footer>
+
+<div class="loading" id="loading">Cargando el mundo…</div>
+
+<script src="js/iso.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

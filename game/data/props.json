@@ -1,0 +1,20 @@
+{
+  "tileTypes": {
+    "grass":  { "top": "#7CC948", "top2": "#6FBF3C", "side": "#4E8F2A", "name": "Pradera" },
+    "soil":   { "top": "#9C6B3F", "top2": "#8C5E36", "side": "#5E3F22", "name": "Tierra" },
+    "pavement": { "top": "#B9C2CC", "top2": "#AEB8C3", "side": "#7C858F", "name": "Adoquín" },
+    "sand":   { "top": "#E7D08A", "top2": "#DEC57C", "side": "#A8925A", "name": "Arena" }
+  },
+  "props": [
+    { "id": "tree",   "name": "Árbol",     "cat": "Naturaleza", "kind": "tree",   "h": 46, "c1": "#3FA34D", "c2": "#2E7D3A", "c3": "#7A4A24" },
+    { "id": "pine",   "name": "Pino",      "cat": "Naturaleza", "kind": "pine",   "h": 54, "c1": "#2E8B57", "c2": "#20603C", "c3": "#6B4423" },
+    { "id": "bush",   "name": "Arbusto",   "cat": "Naturaleza", "kind": "bush",   "h": 22, "c1": "#5DBB63", "c2": "#3E8E45" },
+    { "id": "flower", "name": "Flores",    "cat": "Naturaleza", "kind": "flower", "h": 16, "c1": "#FF6B8B", "c2": "#FFD166", "c3": "#4E8F2A" },
+    { "id": "rock",   "name": "Roca",      "cat": "Naturaleza", "kind": "rock",   "h": 20, "c1": "#9AA3AB", "c2": "#6E767E" },
+    { "id": "well",   "name": "Pozo",      "cat": "Naturaleza", "kind": "well",   "h": 34, "c1": "#B9C2CC", "c2": "#7C858F", "c3": "#4FA3E0" },
+    { "id": "house",  "name": "Casa",      "cat": "Ciudad",     "kind": "house",  "h": 52, "c1": "#F2C14E", "c2": "#E0952A", "c3": "#7FB2FF", "c4": "#C0392B" },
+    { "id": "shop",   "name": "Tienda",    "cat": "Ciudad",     "kind": "shop",   "h": 50, "c1": "#7FB2FF", "c2": "#4E8CD6", "c3": "#F2F5F8", "c4": "#16D89A" },
+    { "id": "lamp",   "name": "Farola",    "cat": "Ciudad",     "kind": "lamp",   "h": 44, "c1": "#4A5560", "c2": "#2E353D", "c3": "#FFE08A" },
+    { "id": "fence",  "name": "Valla",     "cat": "Ciudad",     "kind": "fence",  "h": 20, "c1": "#C9A26B", "c2": "#8C6C42" }
+  ]
+}
